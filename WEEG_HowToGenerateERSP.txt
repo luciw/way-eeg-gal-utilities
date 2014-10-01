@@ -1,0 +1,37 @@
+How to use EEGLAB to generate ERSP images for a certain event 
+over all trials for one participant.
+
+1. Open EEGLAB.
+
+2. Run WEEG_MakeEEGLABDatasets.m for the participant 
+you are interested in.  This will generate 9 .fdt and .set files.
+
+3. File -> Load existing dataset.  
+Select ALL 9 .set files.
+
+4. Edit -> Append dataset, enter indices 1 through 9 
+(or whichever indices correspond to the datasets in EEGLAB - 
+you can see this under the Dataset menu),
+e.g., 1 2 3 4 5 6 7 8 9
+
+Now you have a single dataset with all trials 
+for this participant, notated with events.  
+
+You can single out a particular event as follows (i.e., for ERSP).
+
+5. Tools -> Extract Epochs.  Click the button 
+next to the first row, then select the event you are interested in. 
+Select the desired time interval (with the event always at 0 ms) 
+in the second row.  You will also have to enter the baseline latency range.   
+Another EEGLAB dataset will be generated, with epoched windows around 
+only the event you are interested in.
+
+6. Plot -> Channel ERP image.  Enter the EEG channel you want 
+(refer to EEG_Electrode_Numbering.jpg).  Select the event you used 
+to create epochs in "event type(s)" and select "type" 
+in the "epoch-sorting field" box.  Enter the frequency range 
+in the two left boxes under "sort trials by phase" and 
+"inter-trial coherence options".  Enter a significance level 
+(e.g., 0.05), and check "image amps).  Click the button at the 
+bottom right to generate the result.
+
