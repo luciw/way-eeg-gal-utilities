@@ -1,4 +1,4 @@
-WAY-EEG-GAL .m files contained in Utilities.zip
+WAY-EEG-GAL .m files contained in Utilities
 
 Copyright (c) 2014, Benoni Edin, Matthew Luciw, and Rupesh Srivastava
 All rights reserved.
